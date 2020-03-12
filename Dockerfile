@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER Aurélien Thieriot <aurelien@scalar.is>
+MAINTAINER Magnus Vikstrøm <magnus@vikstrom.no>
 
 ENV CLOUDWATCH_MONITORING_VERSION=1.2.1
 

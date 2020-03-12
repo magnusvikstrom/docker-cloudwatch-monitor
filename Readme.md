@@ -9,7 +9,7 @@ Run with an AWS IAM Role:
       docker run -d \
         -e AWS_IAM_ROLE=<AWS IAM Role> \
         --name=cloudwatch-monitor \
-        athieriot/cloudwatch-monitor
+        magnusvikstrom/cloudwatch-monitor
 
 To run with an AWS Credentials replace AWS_IAM_ROLE with AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY:
 
@@ -17,7 +17,7 @@ To run with an AWS Credentials replace AWS_IAM_ROLE with AWS_ACCESS_KEY_ID and A
         -e AWS_ACCESS_KEY_ID=<Amazon Key> \
         -e AWS_SECRET_ACCESS_KEY=<Amazon secret> \
         --name=cloudwatch-monitor \
-        athieriot/cloudwatch-monitor
+        magnusvikstrom/cloudwatch-monitor
 
 By default the following metrics are recorded:
 
@@ -39,7 +39,7 @@ Optionally include auto scaling metrics (requires additional AWS permissions):
         -e AWS_IAM_ROLE=<AWS IAM Role> \
         -e AUTO_SCALING=true \
         --name=cloudwatch-monitor \
-        athieriot/cloudwatch-monitor
+        magnusvikstrom/cloudwatch-monitor
 
 
 By default, metrics will be send once per 60 seconds. This can be change using FREQUENCY variable:
@@ -48,7 +48,7 @@ By default, metrics will be send once per 60 seconds. This can be change using F
         -e FREQUENCY=120 \
         -e AWS_IAM_ROLE=<AWS IAM Role> \
         --name=cloudwatch-monitor \
-        athieriot/cloudwatch-monitor
+        magnusvikstrom/cloudwatch-monitor
 
 The disk space and usage will be the one of the host machine. This can be configured:
 
@@ -56,6 +56,6 @@ The disk space and usage will be the one of the host machine. This can be config
         -e DISK_PATH=/media/disk \
         -e AWS_IAM_ROLE=<AWS IAM Role> \
         --name=cloudwatch-monitor \
-        athieriot/cloudwatch-monitor
+        magnusvikstrom/cloudwatch-monitor
 
-Inspired from [Octobly](https://hub.docker.com/r/octoblu/cloudwatch-monitor/)
+Forked from [Athierot](https://hub.docker.com/r/athieriot/cloudwatch-monitor/)
